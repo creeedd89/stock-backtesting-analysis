@@ -1,0 +1,19 @@
+def plot_portfolio_value(df, ticker):
+    """
+    Plots the portfolio value over time.
+    
+    Parameters:
+    - df (DataFrame): Must contain 'Portfolio Value'
+    - ticker (str): Stock ticker
+    """
+    import matplotlib.pyplot as plt
+
+    plt.figure(figsize=(14, 5))
+    plt.plot(df['Portfolio Value'], label='Portfolio Value', color='purple')
+    plt.title(f"{ticker} - Portfolio Value Over Time")
+    plt.xlabel("Date")
+    plt.ylabel("Portfolio Value (₹)")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
